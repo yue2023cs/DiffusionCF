@@ -6,8 +6,11 @@
 # Abstract
 Disease surveillance, traffic management, and weather forecasting are some of the key applications that could benefit from block maxima forecasting of a time series as the extreme block maxima values often signify events of critical importance, such as disease outbreaks, traffic gridlock, and severe weather conditions. As the use of deep neural network models for block maxima forecasting increases, so does the need for explainable AI methods that could unravel the inner workings of such black box models. To fill this need, this paper presents a novel counterfactual explanation framework for block maxima forecasting models. Unlike existing methods, our proposed framework, DiffusionCF, combines deep anomaly detection with a conditional diffusion model to identify unusual patterns in the time series that could help explain the forecasted extreme block maxima. Experimental results on several real-world datasets demonstrate the superiority of DiffusionCF over other baseline methods when evaluated according to various metrics, particularly their informativeness and closeness.
 
+
+<img src="https://github.com/yue2023cs/DiffusionCF/blob/main/DiffusionCF_architecture.png" width="666"/>
+
 # Usage
-The three **datasets** used in this work are: `S&P500.csv`, `Dogers/*`, and `Mobile_and_Pensacola_area/*`. All necessary **dependencies** to run the code are specified in `para_manager.py`. The key **hyperparameters** for both our method and the baseline methods are documented in `pkg_manager.py`.
+The three **datasets** used in this work are: `S&P500.csv`, `Dogers/*`, and `Mobile_and_Pensacola_area/*`. All necessary **dependencies** to run the code are specified in `pkg_manager.py`. The key **hyperparameters** for both our method and the baseline methods are documented in `para_manager.py`.
 
 `main.py` serves as the **driver** script for the entire codebase:
 1. Loads the `dataProcessor` object from `data_processor.py` for data preprocessing, including the functions `readFolder`, `splitTrainValTest`, and `splitPredictorTarget`.
